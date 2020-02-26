@@ -8,15 +8,15 @@ var reload = browserSync.reload;
 
 var paths = {
     html: ['app/index.html'],
-    css: ['app/scss/*.scss'],
-    script: ['app/js/main.js']
+    css: ['app/scss/*.scss', 'app/modules/**/*.scss'],
+    script: ['app/main.js']
 };
 
 gulp.task('mincss', function () {
     return gulp.src(paths.css)
         .pipe(sass().on('error', sass.logError))
         .pipe(minifyCss())
-        .pipe(gulp.dest('app/css'))
+        .pipe(gulp.dest('app/dist/css'))
         .pipe(reload({ stream: true }));
 });
 

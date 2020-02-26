@@ -4,7 +4,7 @@
 .vscode
 
 # compiled output
-/dist
+/app/dist
 /dist-server
 /tmp
 /out-tsc
