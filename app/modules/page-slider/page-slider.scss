@@ -1,0 +1,40 @@
+.page-slider {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    .page-slider-container {
+        height: 100%;
+        height: 200000px;
+        transition: transform .7s;
+        .page-slide {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: block;
+        }
+    }
+    .page-slider-nav {
+        position: absolute;
+        top: 50vh;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        transform: rotate(90deg);
+        .page-slider-round {
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            transition: background .3s;
+            border-radius: 50%;
+            margin-left: 8px;
+            cursor: pointer;
+            &.active {
+                background-color: #f78b1f;
+            }
+        }
+    }
+}
