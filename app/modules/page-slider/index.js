@@ -43,11 +43,11 @@ PageSlider.prototype.create = function () {
     });
 
     container.addEventListener("mouseup", (e) => {
-        if (e.screenY > curMouseY && this.slideIndex > 0) {
+        if ((e.screenY - curMouseY > this.pixelsToSlide) && (this.slideIndex > 0)) {
             this.cleanRounds();
             this.slideIndex--;
             this.translateSlider();
-        } else if (e.screenY < curMouseY && this.slideIndex < this.slideLength - 1) {
+        } else if ((curMouseY - e.screenY > this.pixelsToSlide) && (this.slideIndex < this.slideLength - 1)) {
             this.cleanRounds();
             this.slideIndex++;
             this.translateSlider();
